@@ -1,0 +1,52 @@
+<NewAb>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 20
+        canvas.before:
+            Color:
+                rgba: 100, 100, 100, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text:'[color=000000]Новый абонимент[/color]'
+            font_size: 25
+            markup: True
+            font_name: "Roboto"
+            size_hint: (0.01, 0.01)
+            pos_hint:{"center_x":0.5, "top": 1}
+
+
+        Label:
+            font_size: 30
+            text: '[color=D2691E]Цена[/color]'
+            markup: True
+            font_name: "Roboto"
+            size_hint: (0.5, 0.01)
+            pos_hint:{"center_x":0.1, "top": 1}
+        TextInput:
+            height: 20
+            text: '450'
+            font_size: 20
+            size_hint: (0.9, 0.005)
+
+        Label:
+            font_size: 30
+            text: '[color=D2691E]Количество[/color]'
+            markup: True
+            font_name: "Roboto"
+            size_hint: (0.5, 0.01)
+            pos_hint:{"center_x":0.23, "top": 1}
+        TextInput:
+            height: 20
+            font_size: 20
+            size_hint: (0.9, 0.005)
+
+        Button:
+            font_size: 30
+            text: 'Добавить'
+            size_hint: (0.5, 0.01)
+            pos_hint:{"center_x":0.75, "top":1}
+            font_name: "Roboto"
+            on_press: root.manager.current = 'clients'

@@ -6,6 +6,9 @@ from kivy.uix.screenmanager import ScreenManager
 
 from screens.welcome import Welcome
 from screens.clients import Clients
+from screens.NewAboniment import NewAb
+from kivy.core.window import Window
+Window.size = (400, 700)
 
 
 class MembershipAccounting(App):
@@ -13,11 +16,10 @@ class MembershipAccounting(App):
     def build(self):
         sm = ScreenManager()
 
-        Builder.load_file(os.path.join(os.getcwd(), 'designs', 'welcome.kv'))
-        sm.add_widget(Welcome(name='welcome'))
+        Builder.load_file(os.path.join(os.getcwd(), 'designs', 'NewAboniment.kv'))
+        sm.add_widget(NewAb(name='welcome'))
 
-        Builder.load_file(os.path.join(os.getcwd(), 'designs', 'clients.kv'))
-        sm.add_widget(Clients(name='clients'))
+
 
         return sm
 
